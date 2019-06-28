@@ -1,0 +1,361 @@
+/*logic style*/
+ul#nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul#nav li a {
+  text-transform: capitalize;
+  font-weight: 600;
+  display: block;
+  transition: all 0.5s;
+}
+
+.hero-content::after, .hero-content-area, .overlay, .more-btn a::after,
+.cv-download-btn a::after, .about-area::after, .hire-btn a::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.more-btn a,
+.cv-download-btn a, .hire-btn a {
+  position: relative;
+  color: #fff;
+  text-transform: uppercase;
+  display: block;
+  padding: 8px 25px;
+  position: relative;
+}
+
+.more-btn a::after,
+.cv-download-btn a::after, .about-area::after, .hire-btn a::after {
+  content: "";
+  background: linear-gradient(to right, #11155e, #152a78, #153f92, #1054ac, #006bc7);
+  transform: skewX(-20deg);
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+.more-btn a:hover::after,
+.cv-download-btn a:hover::after, .hire-btn a:hover::after {
+  transform: skewX(20deg);
+  transition: all 0.5s;
+}
+
+.about-section {
+  padding: 50px 0;
+}
+
+.section-title h1 {
+  color: #d30613;
+  text-transform: capitalize;
+  font-weight: 700;
+  padding-bottom: 30px;
+}
+
+/*common style*/
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  line-height: 28px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+/*top section start*/
+.top-bar-section {
+  overflow: hidden;
+}
+
+.section-bg-style-1 {
+  background-color: #d30613;
+  position: absolute;
+  width: 100%;
+  height: 78px;
+}
+
+.top-bar-area {
+  position: relative;
+  padding: 10px 0;
+  z-index: 1;
+}
+
+.top-bar-area::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, #11155e, #152a78, #153f92, #1054ac, #006bc7);
+  z-index: -1;
+  transform: skewX(-40deg);
+  border-right: 10px solid #fff;
+  border-left: 10px solid #fff;
+  transition: all 0.5s;
+}
+
+.top-bar-area:hover::after {
+  transform: skewX(40deg);
+  transition: all 0.5s;
+}
+
+.logo h2 {
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 700;
+  margin: 0;
+  line-height: 50px;
+}
+
+.logo {
+  text-align: center;
+}
+
+ul#nav {
+  float: right;
+  margin-right: 60px;
+}
+ul#nav li {
+  display: inline-block;
+}
+ul#nav li a {
+  color: #fff;
+  padding: 15px;
+  position: relative;
+}
+ul#nav li a:hover {
+  transition: all 1s;
+  color: #d30613;
+}
+ul#nav li a:hover::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #d30613;
+  transform: skewX(-40deg);
+  transition: all 0.5s;
+}
+ul#nav li.active a {
+  color: #d30613;
+  transition: all 1s;
+}
+ul#nav li.active a:hover::after {
+  transform: skewX(40deg);
+  transition: all 0.5s;
+}
+ul#nav li.active a::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #d30613;
+  transform: skewX(-40deg);
+  transition: all 0.5s;
+}
+
+/*top section end*/
+/*hero section start*/
+.video-bg {
+  height: 90vh;
+  width: 100%;
+  overflow: hidden;
+}
+.video-bg video {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.hero-section {
+  position: relative;
+}
+
+.overlay {
+  background: #d30613;
+  opacity: 0.2;
+}
+
+.hero-content {
+  position: relative;
+  display: table;
+  height: 90vh;
+  z-index: 3;
+  text-transform: capitalize;
+}
+.hero-content h3 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.hero-content h1 {
+  font-weight: 900;
+  font-size: 45px;
+  letter-spacing: 1px;
+}
+.hero-content h4 {
+  font-weight: 700;
+  padding-top: 30px;
+  font-size: 30px;
+}
+.hero-content p {
+  font-size: 18px;
+  padding-bottom: 25px;
+  font-style: italic;
+}
+
+.hero-content:hover::after {
+  height: 90%;
+  top: 5%;
+  transform: rotateZ(5deg);
+  border-radius: initial;
+  transition: all 0.5s;
+}
+
+.hero-content::after {
+  content: "";
+  background: linear-gradient(to right, #11155e, #152a78, #153f92, #1054ac, #006bc7);
+  z-index: -1;
+  display: inline-block;
+  opacity: 0.5;
+  overflow: hidden;
+  box-shadow: 0 0 10px #000;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+
+.content-center {
+  display: table-cell;
+  vertical-align: middle;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.hire-btn {
+  display: inline-block;
+}
+
+.hire-btn a {
+  margin: 10px 0;
+}
+
+button#control-btn {
+  background: #fff;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  color: #777;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+button#control-btn:focus {
+  outline: none;
+}
+
+/*hero section end*/
+/*about me section start*/
+.about-thumb {
+  width: 48%;
+  float: left;
+  background: linear-gradient(to right, #11155e, #152a78, #153f92, #1054ac, #006bc7);
+  padding: 50px;
+  text-align: center;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  transition: all 0.5s;
+}
+
+.about-thumb:hover {
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  transition: all 0.5s;
+}
+.about-thumb:hover img {
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  transition: all 0.5s;
+}
+
+.about-thumb img:hover {
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+
+.about-thumb img {
+  width: 70%;
+  box-shadow: 0 0 10px #000;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  transition: all 0.5s;
+}
+
+.about-content {
+  display: table;
+  height: 100%;
+}
+
+.about-content-center {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 30px;
+}
+
+.about-area {
+  position: relative;
+  height: 100%;
+}
+
+.about-excerpt p {
+  color: #fff;
+}
+
+.more-btn,
+.cv-download-btn {
+  display: inline-block;
+  float: left;
+  margin-right: 20px;
+  margin-top: 30px;
+}
+
+.more-btn a,
+.cv-download-btn a {
+  z-index: 1;
+}
+
+/*about me section end*/
+
+/*# sourceMappingURL=style.css.map */
